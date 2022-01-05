@@ -1,5 +1,5 @@
 from pyrogram import Client, filters, idle
-from config import BOT_TOKEN, API_ID, API_HASH, SESSION, prefix
+from config import BOT_TOKEN, API_ID, API_HASH, SESSION
 
 
 plugins = dict(root="src/plugins")
