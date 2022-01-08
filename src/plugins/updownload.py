@@ -26,6 +26,8 @@ async def download(app, message):
     if len(message.command) > 1:
        downloader = SmartDL(message.command[1], dir, progress_bar=False)
        downloader.start(blocking=False)
+       while not downloader.isFinished():
+          await message.edit(text="Progress: %d%%" % (obj.get_progress()*100))
        if downloader.isSuccessful():
           await message.edit("File downloaded")
        await asyncio.sleep(5)
@@ -42,6 +44,8 @@ async def downupload(app, message):
     if len(message.command)>1:
        downloader = SmartDL(message.command[1], dir, progress_bar=False)
        downloader.start(blocking=False)
+       while not downloader.isFinished():
+          await message.edit(text="Progress: %d%%" % (obj.get_progress()*100))
        if downloader.isSuccessful():
           await message.edit("File downloaded")
           await asyncio.sleep(1)
