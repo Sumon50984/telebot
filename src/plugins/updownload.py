@@ -25,7 +25,7 @@ async def upload(app, message):
 async def download(app, message):
     if len(message.command) > 1:
        downloader = SmartDL(message.command[1], dir, progress_bar=False)
-       downloader.start()
+       downloader.start(blocking=False)
        if downloader.isSuccessful():
           await message.edit("File downloaded")
        await asyncio.sleep(5)
@@ -41,10 +41,10 @@ async def download(app, message):
 async def downupload(app, message):
     if len(message.command)>1:
        downloader = SmartDL(message.command[1], dir, progress_bar=False)
-       downloader.start()
+       downloader.start(blocking=False)
        if downloader.isSuccessful():
           await message.edit("File downloaded")
-          await asyncio.sleep(2)
+          await asyncio.sleep(1)
     else:
        for e in downloader.get_errors():
           await message.edit(str(e))
@@ -60,7 +60,7 @@ async def downupload(app, message):
              chat_id = message.chat.id
        )
     except:
-           await message.edit("Failed!")
-           await message.delete()
+       await message.edit("Failed!")
+       await message.delete()
 
     os.remove(str(file))
