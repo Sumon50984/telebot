@@ -1,4 +1,4 @@
-Pyrogram==1.2.11
+Pyrogram==1.4
 TgCrypto==1.2.2
 feedparser==6.0.8
 python-binance==1.0.15
