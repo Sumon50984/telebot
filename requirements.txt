@@ -4,3 +4,5 @@ feedparser==6.0.8
 python-binance==1.0.15
 pyyaml==6.0
 asyncio==3.4.3
+pyStartDL
+requests

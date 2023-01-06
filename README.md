@@ -1,1 +1,1 @@
-A personal telegram selfbot by using pyrogram framework
+Personal telegram selfbot by using pyrogram framework, for userbot and normal bot both

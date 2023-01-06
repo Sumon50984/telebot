@@ -6,7 +6,7 @@ import asyncio
 async def file_adder(app, message):
    replied = message.reply_to_message
    if not replied or not replied.document:
-       return await message.edit("You did something wrong and you know that now, right?")
+       return await message.edit("Reply to a message where have the file!")
    file = replied.document.file_name
    path = f"{message.command[1]}/{file}"
    try:

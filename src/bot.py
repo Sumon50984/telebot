@@ -1,4 +1,4 @@
-from pyrogram import Client, filters, idle
+from pyrogram import Client
 from config import BOT_TOKEN, APP_ID, API_HASH, SESSION
 
 
@@ -17,4 +17,3 @@ app = Client(
   api_hash = API_HASH,
   session_name= SESSION
 )
-
