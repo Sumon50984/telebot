@@ -1,1 +1,1 @@
-Personal telegram selfbot by using pyrogram framework, for userbot and normal bot both
+Personal telegram bot to run some scripts through telegram
